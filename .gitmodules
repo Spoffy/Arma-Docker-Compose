@@ -1,0 +1,3 @@
+[submodule "arma3-docker"]
+	path = arma3-docker
+	url = https://github.com/Spoffy/arma3-docker
