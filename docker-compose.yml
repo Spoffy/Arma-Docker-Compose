@@ -1,0 +1,14 @@
+version: '3'
+services:
+  arma_server:
+    build: ./arma3-docker
+    ports:
+      - "2302-2305:2302-2305/udp"
+    volumes:
+      - /opt/arma3/keys:/arma3/keys
+      - /opt/arma3/mods:/arma3/mods
+      - /opt/arma3/mpmissions:/arma3/mpmissions
+      - /opt/arma3/server:/server
+      - /opt/arma3/profiles:/profiles
+
+    
