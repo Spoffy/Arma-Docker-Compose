@@ -2,6 +2,7 @@ version: '3'
 services:
   arma_server:
     build: ./arma3-docker
+    image: arma3_server
     ports:
       - "2302-2305:2302-2305/udp"
     volumes:
@@ -10,6 +11,5 @@ services:
       - "${HOST_ARMA_DIR}/mpmissions:/arma3/mpmissions"
       - "${HOST_ARMA_DIR}/server:/server"
       - "${HOST_ARMA_DIR}/profiles:/profiles"
+    network_mode: "host"
     command: ["-cfg=/server/basic.cfg", "-config=/server/server.cfg", "-mod=mods/@tembelan_island;"]
-
-    

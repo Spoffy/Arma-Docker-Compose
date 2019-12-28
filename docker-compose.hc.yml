@@ -1,0 +1,15 @@
+version: '3'
+services:
+  arma_hc:
+    image: arma3_server
+    volumes:
+      - "${HOST_ARMA_DIR}/key:/arma3/keys"
+      - "${HOST_ARMA_DIR}/mods:/arma3/mods"
+      - "${HOST_ARMA_DIR}/mpmissions:/arma3/mpmissions"
+      - "${HOST_ARMA_DIR}/server:/server"
+      - "/profiles"
+    entrypoint: ["./arma3server"]
+    network_mode: "host"
+    command: ["-client", "-connect=127.0.0.1", "-port=2302", "-password=", "-name=HC", "-mod=mods/@tembelan_island;", "-profiles=/profiles"]
+
+   
