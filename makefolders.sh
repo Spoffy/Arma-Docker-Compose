@@ -1,4 +1,4 @@
-BASE=/opt
+BASE=$1
 ARMAROOT=$BASE/arma3
 
 mkdir $ARMAROOT
