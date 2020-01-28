@@ -12,4 +12,4 @@ services:
       - "${HOST_ARMA_DIR}/server:/server"
       - "${HOST_ARMA_DIR}/profiles:/profiles"
     network_mode: "host"
-    command: ["-cfg=/server/basic.cfg", "-config=/server/server.cfg", "-mod=mods/@tembelan_island;"]
+    command: ["-cfg=/server/basic.cfg", "-config=/server/server.cfg", "-mod="]
